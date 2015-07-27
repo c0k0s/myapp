@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>City</title>
+</head><!--/head-->
+
+<body>
+	<center>
+	<h2>City</h2>
+	<br/>
+
+	<form action="" method="POST">
+	{% csrf_token %}
+	<table>
+		<tr>
+			<td>City Name</td>
+			<td><input type="text" name="name" required="" /></td>
+		</tr>
+		<tr>
+			<td>City Code</td>
+			<td><input type="text" name="code" required="" /></td>
+		</tr>
+	</table>
+	<br/>
+	<input type="submit" value="Submit" />
+	</form>
+	<br/><br/>
+	<hr>
+	<br/>
+	<table width="25%">
+		<tr style="font-weight:bold;">
+			<td>SL</td>
+			<td>City Name</td>
+			<td>Code</td>
+		</tr>
+		{% for city in cityData %}
+		<tr>
+			<td>{{forloop.counter}} </td>
+			<td>{{city.origin}} </td>
+			<td>{{city.destination}}, {{city.dc.empID}} </td>
+		</tr>
+		{% endfor %}
+	</table>
+	
+	</center>
+</body>
+</html>
+
+<pre>
+
+
+	{% for city in cityData %}
+		{{forloop.counter0}}
+		{{city.scan.scan.forloop.counter0.empID}}
+		
+		
+
+	{% endfor %}
+
+</pre>

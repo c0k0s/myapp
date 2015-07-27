@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>City</title>
+</head><!--/head-->
+
+<body>
+	<a href="/waybill/views/">Views</a>
+	<center>
+	<h2>City</h2>
+	<br/>
+	{% if msg == 'SUCCESS' %}
+	{{msg}}
+	{% endif %}
+	<form action="" method="POST">
+	{% csrf_token %}
+	<table>
+		<tr>
+			<td>City Name</td>
+			<td><input type="text" name="name" required="" /></td>
+		</tr>
+		<tr>
+			<td>City Code</td>
+			<td><input type="text" name="code" required="" /></td>
+		</tr>
+	</table>
+	<br/>
+	<input type="submit" value="Submit" />
+	</form>
+	
+	</center>
+</body>
+</html>

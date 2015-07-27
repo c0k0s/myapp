@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>City</title>
+</head><!--/head-->
+
+<body>
+	<center>
+	<h2>City</h2>
+
+	<table width="25%">
+		<tr style="font-weight:bold;">
+			<td>SL</td>
+			<td>City Name</td>
+			<td>Code</td>
+		</tr>
+		{% for city in cityData %}
+		<tr>
+			<td>{{forloop.counter}} </td>
+			<td>{{city.name}} </td>
+			<td>{{city.code}} </td>
+		</tr>
+		{% endfor %}
+	</table>
+
+	</center>
+</body>
+</html>
